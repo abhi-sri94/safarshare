@@ -1,0 +1,71 @@
+I want these security Features to be included in my SafarShare website and app.
+   
+1. Verified User Authentication
+
+    - Email & Phone verification during signup
+    - Government ID verification (Aadhaar, Driving License) for drivers
+    - Profile photo and name shown publicly for accountability
+    - Admin can approve/reject driver accounts
+
+2. Panic Button (SOS)
+
+    -  In-app panic button for both drivers and passengers
+
+    When pressed:
+
+    - Sends live location to emergency contacts
+    - Alerts nearby authorities (if integrated)
+    - Notifies SafarShare support team instantly
+
+3. Background Checks for Drivers
+
+        - Drivers must submit ID proofs and license
+
+    Optionally verify:
+
+        - Police clearance certificate
+        - Vehicle registration & insurance
+        - Manual or automated verification by admin panel
+
+4. No Last-Minute Cancellation Policy
+
+        - Passengers/drivers can’t cancel a ride within a set time window (e.g., 2 hours before ride)
+
+    If cancelled late:
+
+        - Auto deduction of penalty amount upto 100% of the ride amount
+        - Temporary suspension for repeated offences
+
+5. Real-time Ride Tracking
+
+    - Live location tracking using Google Maps or Mapbox
+    - Shareable ride link to friends/family for safety
+    - Notification alerts on pickup/dropoff progress
+
+7. Ride Reviews & Ratings
+
+    - Mandatory post-ride feedback from both parties
+    - Reports and blocks against abusive/inappropriate behavior
+    - Repeatedly flagged users get suspended automatically
+
+8. End-to-End Encrypted Communication
+
+    - Use private chat system inside the app
+    - Prevent sharing of personal contact details
+    - Chats are encrypted and optionally visible to admin for dispute resolution
+
+9. Admin Dashboard for Monitoring
+
+    Admin can:
+
+        -  View all ride logs
+        -  Track flagged users
+        -  See ride history, panic alerts, etc.
+        -  Ban or warn users based on violations
+
+10. Secure Architecture
+
+    - Use HTTPS across the site
+    - Store passwords using bcrypt
+    - Protect API routes with JWT (JSON Web Tokens) and role-based access
+    - Rate limiting and CAPTCHA to prevent bots/spam 

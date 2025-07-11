@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - सफरShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>सफरShare</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rides">Find Rides</a>
+            <a href="index.html#post-ride">Post Ride</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </nav>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <h2>Welcome Back</h2>
+            <p>Sign in to continue your journey</p>
+            
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="form-group remember-forgot">
+                    <label style="white-space: nowrap;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <button onclick="authenticateWithGoogle()" class="social-btn">
+                <i class="fab fa-google"></i>
+                Continue with Google
+            </button>
+
+            <!-- Separate phone number section -->
+            <div class="phone-section">
+                <div class="phone-input-group" id="phone-login-section">
+                    <i class="fas fa-phone"></i>
+                    <span class="phone-input-prefix">+91</span>
+                    <input type="tel" class="phone-input-field" placeholder="Phone Number" id="phone-number-input">
+                </div>
+                <button class="social-btn" id="send-otp-btn">
+                    <i class="fas fa-phone"></i>
+                    Continue with Phone Number
+                </button>
+                <div class="form-group" id="otp-section" style="display: none;">
+                    <i class="fas fa-key"></i>
+                    <input type="text" placeholder="Enter OTP" id="otp-input">
+                </div>
+                <button class="social-btn" id="verify-otp-btn" style="display: none;">
+                    <i class="fas fa-check"></i>
+                    Verify OTP
+                </button>
+                <div id="recaptcha-container"></div>
+                <div class="form-group checkbox-group" style="margin-top: 15px;">
+                    <label for="phone-terms" style="white-space: nowrap; display: flex; align-items: center; gap: 6px;">
+                        <input type="checkbox" id="phone-terms" required>
+                        I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
+                    </label>
+                </div>
+            </div>
+
+            <p class="auth-footer">
+                Don't have an account? <a href="signup.html">Sign up</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="navbar.js"></script>
+    <script type="module" src="auth.js"></script>
+</body>
+</html> 

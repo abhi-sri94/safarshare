@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सफरShare - Ride Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Google Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqGRzGnTUbYVZPmRLk3eGCChvwDLVPZT8&libraries=places"></script>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>सफरShare</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#rides">Find Rides</a>
+            <a href="#post-ride">Post Ride</a>
+            <a href="#about">About</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Share Your Journey, Share Your Story</h1>
+                <p>Safe, reliable, and affordable ride-sharing platform</p>
+                <div class="search-box">
+                    <input type="text" id="from-city" class="city-input" placeholder="From" autocomplete="off">
+                    <input type="text" id="to-city" class="city-input" placeholder="To" autocomplete="off">
+                    <input type="date" id="journey-date">
+                    <button class="search-btn">Search Rides</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose सफरShare?</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe Travel</h3>
+                    <p>GPS tracking and verified users for your safety</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Affordable</h3>
+                    <p>Share costs and save money on your journey</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Connect with fellow travellers</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="post-ride" class="post-ride">
+            <h2>Post Your Ride</h2>
+            <form id="ride-form" class="ride-form">
+                <div class="form-group">
+                    <input type="text" id="post-from-city" class="city-input" placeholder="From City" required autocomplete="off">
+                    <input type="text" id="post-to-city" class="city-input" placeholder="To City" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="date" required>
+                    <input type="time" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Available Seats" min="1" required>
+                    <input type="number" placeholder="Fare per Seat" min="1" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Gender Preference</option>
+                        <option value="any">Any</option>
+                        <option value="male">Male Only</option>
+                        <option value="female">Female Only</option>
+                    </select>
+                    <input type="text" placeholder="Pickup Point" required>
+                </div>
+                <button type="submit" class="submit-btn">Post Ride</button>
+            </form>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About सफरShare</h2>
+            <p>सफरShare is a pioneering ride-sharing platform dedicated to making your journeys safe, affordable, and enjoyable. Our mission is to connect travelers and create a community where sharing rides becomes a seamless experience.</p>
+            <p>With सफरShare, you can easily find or post rides, ensuring reliable and comfortable travel. We prioritize your safety with features like GPS tracking and verified user profiles.</p>
+            <p>Join our growing community and experience the future of shared travel!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>सफरShare</h3>
+                <p>Making travel safer and more affordable</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Safety</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@सफरShare.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 सफरShare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navbar.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html> 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - SafarShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>SafarShare</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rides">Find Rides</a>
+            <a href="index.html#post-ride">Post Ride</a>
+            <a href="index.html#about">About</a>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img id="user-avatar" src="https://via.placeholder.com/150" alt="Profile Picture">
+                    <input type="file" id="avatar-input" accept="image/*" style="display:none;">
+                    <button class="change-avatar-btn" type="button">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <h2 id="user-name">Loading...</h2>
+                <p id="user-email">Loading...</p>
+            </div>
+
+            <div class="profile-sections">
+                <section class="profile-section">
+                    <h3>Personal Information</h3>
+                    <form id="profile-form" class="profile-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Account Settings</h3>
+                    <div class="settings-list">
+                        <div class="setting-item">
+                            <span>Email Notifications</span>
+                            <label class="switch">
+                                <input type="checkbox" id="email-notifications" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <span>SMS Notifications</span>
+                            <label class="switch">
+                                <input type="checkbox" id="sms-notifications">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Safety Settings</h3>
+                    <div class="safety-settings">
+                        <div class="setting-item">
+                            <span>Share Location During Rides</span>
+                            <label class="switch">
+                                <input type="checkbox" id="location-sharing" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <span>Emergency Contact</span>
+                            <input type="tel" id="emergency-contact" placeholder="Enter emergency contact number">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="profile.js"></script>
+</body>
+</html> 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - SafarShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>SafarShare</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rides">Find Rides</a>
+            <a href="index.html#post-ride">Post Ride</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </nav>
+    <main class="auth-container" style="margin-top: 40px;">
+        <div class="auth-card" style="max-width: 600px; width: 100%;">
+            <h2>Chat</h2>
+            <div id="chat-messages" style="height: 300px; overflow-y: auto; background: #f9f9f9; border-radius: 8px; padding: 12px; margin-bottom: 16px;"></div>
+            <form id="chat-form" style="display: flex; gap: 8px;">
+                <input type="text" id="chat-input" placeholder="Type a message..." required style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                <button type="submit" class="auth-btn" style="padding: 10px 20px;">Send</button>
+            </form>
+        </div>
+    </main>
+    <script type="module" src="chat.js"></script>
+</body>
+</html> 
