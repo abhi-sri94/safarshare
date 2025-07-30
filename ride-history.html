@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride History - SafarShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>SafarShare</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rides">Find Rides</a>
+            <a href="index.html#post-ride">Post Ride</a>
+            <a href="index.html#about">About</a>
+            <a href="ride-history.html">Ride History</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
+    <main class="auth-container" style="margin-top: 40px;">
+        <div class="auth-card" style="max-width: 700px; width: 100%;">
+            <h2>Ride History</h2>
+            <table id="ride-history-table" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ride-history-body">
+                    <tr><td colspan="5" style="text-align:center; color:#888;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script type="module" src="ride-history.js"></script>
+</body>
+</html> 
